@@ -1,0 +1,44 @@
+{
+  "name": "@breeffy/react-native-invariant",
+  "version": "1.0.0",
+  "description": "invariant and assert functions with types for React Native",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "rimraf lib && tsc -p tsconfig.json",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "tsc --noEmit && jest --coverage --passWithNoTests && yarn lint",
+    "prepack": "yarn build",
+    "prepublishOnly": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breeffy/react-native-invariant.git"
+  },
+  "keywords": [
+    "react native",
+    "invariant",
+    "assert",
+    "typescript",
+    "breeffy"
+  ],
+  "author": "Victor Malov <victor.malov@breeffy.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/breeffy/react-native-invariant/issues"
+  },
+  "homepage": "https://github.com/breeffy/react-native-invariant#readme",
+  "private": false,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  }
+}
